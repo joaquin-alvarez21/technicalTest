@@ -1,0 +1,2 @@
+connect to db -> docker exec -it postgres psql -U currencybirdAdmin -d currencybird_db_development // The las one depend of the mode, dev, test or production
+load seeds    -> docker exec -it technicalTestCurrencyBird npx sequelize-cli db:seed:all
