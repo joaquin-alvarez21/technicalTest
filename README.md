@@ -53,7 +53,8 @@ We have two endpoints. (Remember the authcode can be change if you want)
 |URL | http://localhost:3000/payment/information/:transferCode |
 |Header | Authorization: currencyBirdAuthToken |
 | Method | GET |
-
+- Respuesta exitosa:
+![Alt text](image-1.png)
 
 | |  |
 | --- | --- |
@@ -62,7 +63,11 @@ We have two endpoints. (Remember the authcode can be change if you want)
 |Header | Authorization: currencyBirdAuthToken |
 | Method | POST |
 | Body | { "transferCode": trasnfercode, "amount": 1000 }
+- Respuesta exitosa:
+![Alt text](image-1.png)
 
 If you use postman use raw an JSON for send the body, because th app only accept 'application/json' in the Content-Type.
 
 ![Alt text](image.png) 
+
+The error were handled, 401 can be bad token or bad email in path or body (transfercode), if you try use the same transfercode more than once, the error is 400 with a descriptive message. The rest of error show the same status and message that we received from the api.
